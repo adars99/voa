@@ -19,4 +19,8 @@ export default class SubmitOrderCtrl {
   
       this.render();
     };
+
+    submitOrder(){
+      console.log("adarsh");
+    }
   }

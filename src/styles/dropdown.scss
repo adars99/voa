@@ -1,0 +1,80 @@
+.em-dropdown,
+.em-dropdown.form-control {
+  height: 28px;
+  border-color: #A9B1BE;
+  color: #333333;
+  font-family: "ProximaNova-Semibold", Helvetica, Arial, sans-serif;
+  font-size: .815rem;
+  padding: 5px 30px 5px 10px; /* Important because app.less uses important for this */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 0;
+  /** Styles for ellipsis, this will work as expected only for firefox **/
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0px 1px 0px 0px #CBCFD7;
+  overflow: hidden !important; /* Important because user agent uses important for this */
+}
+
+.em-dropdown::-ms-expand{
+  display: none; /* To hide caret in IE */
+}
+
+.em-dropdown::-ms-value {
+    background: none; /* remove blue background on ie10/ie11 when selected*/
+    color:#333333;
+}
+
+.em-dropdown + .em-icon-chevron-down,
+.em-dropdown.form-control + .em-icon-chevron-down {
+  position: absolute;
+  float: right;
+  margin-top: 7px;
+  margin-left: -20px;
+  color: #2080CD;
+}
+
+em-dropdown + .em-icon-chevron-down:hover,
+.em-dropdown.form-control + .em-icon-chevron-down:hover {
+    color:#1394E5;
+}
+
+.em-dropdown.restricted,
+.em-dropdown.disabled,
+.em-dropdown.readonly {
+  background-color: #E0E3E8;
+  border: 1px solid #CBCFD7;
+  &:hover {
+    border: 1px solid #CBCFD7;
+  }
+}
+
+.em-dropdown.disabled {
+  color: #A9B1BE;
+}
+
+.em-dropdown:hover, .em-dropdown.hover, .em-dropdown:focus, .em-dropdown.focus {
+  border-color: #1394E5;
+}
+
+.em-dropdown.restricted + .em-icon-chevron-down,
+.em-dropdown.disabled + .em-icon-chevron-down,
+.em-dropdown.readonly + .em-icon-chevron-down,
+.em-dropdown[disabled] + .em-icon-chevron-down,
+.em-dropdown[readonly] + .em-icon-chevron-down {
+  color: #A9B1BE;
+}
+
+.em-dropdown.error {
+  border: 1px solid #E34256;
+}
+
+.em-dropdown option{
+  padding: 5px 35px 5px 10px; /*This will work only in Firefox, hopefully other browsers too start supporting in future*/
+}
+
+.state-types {
+  display: block;
+}

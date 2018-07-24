@@ -1,4 +1,6 @@
 $font-family-base: 'ProximaNova-Regular', Helvetica, Arial, sans-serif;
+@import '~@elliemae/em-epc-components/dist/style.css';
+@import 'dropdown.scss';
 
 html, body * {
     font-family: $font-family-base;
@@ -9,7 +11,13 @@ html, body * {
     box-sizing: border-box;
 }
 
+.em-sub-header{
+    padding: 10px;
+    background: #fff;
+}
 .main-container{
+
+   
     .rtable {
         /*!
         // IE needs inline-block to position scrolling shadows otherwise use:
@@ -64,12 +72,12 @@ html, body * {
         font-size: 11px;
         text-align: left;
         text-transform: uppercase;
-        background: #f2f0e6;
+        background: #E0E3E8;
       }
       
       .rtable th,
       .rtable td {
-        padding: 6px 12px;
-        border: 1px solid #d9d7ce;
+        padding: 15px 12px;
+        width: 20%;
       }
 }

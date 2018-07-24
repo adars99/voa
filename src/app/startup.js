@@ -1,4 +1,4 @@
-//import 'em-epc-components';
+import '@elliemae/em-epc-components/dist/bundle';
 
 import { $on } from './utils/util';
 import SubmitOrderView from './views/submitorder.view';

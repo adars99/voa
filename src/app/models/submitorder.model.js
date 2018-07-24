@@ -25,9 +25,15 @@ export default class Model {
   toJSON() {
     const iso = this.now.toISOString();
     const days = this.getDays();
+    const event = this.submitOrder;
 
-    return { iso, days };
+    return { iso, days, event };
   };
+
+  submitOrder(){
+    console.log("adarsh");
+  }
+
 
   getDataTableData(){
     const ordersData = [{
