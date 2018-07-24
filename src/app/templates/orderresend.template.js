@@ -110,11 +110,11 @@ const html = (literal, ...cooked) => {
   
   </div>`;
   
-  const SubmitOrderTemplate = data => html`
+  const OrderResendTemplate = data => html`
   
       ${controls(data)}
       ${footer(data)}
       
   `;
   
-  export { SubmitOrderTemplate };
+  export { OrderResendTemplate };

@@ -1,6 +1,4 @@
-//import { SubmitOrderTemplate } from '../templates/submitorder.template';
-//import { SubmitOrderTemplate } from '../templates/orderresend.template';
-import { SubmitOrderTemplate } from '../templates/ordercomplete.template';
+import { SubmitOrderTemplate } from '../templates/submitorder.template';
 
 export default class SubmitOrderView {
   constructor() {
