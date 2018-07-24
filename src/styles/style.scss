@@ -12,7 +12,7 @@ html, body * {
 }
 
 .em-sub-header{
-    padding: 10px;
+    padding: 15px 20px;
     background: #fff;
 }
 .main-container{
@@ -80,4 +80,48 @@ html, body * {
         padding: 15px 12px;
         width: 20%;
       }
+
+    .order-container {
+      display: inline-flex;
+      width: 100%;
+
+      .order-column {
+        padding: 15px 25px;
+
+        > div {
+          padding-top: 5px;
+          font-weight: bold;
+
+          &.dropdown-container {
+            padding-top: 0;
+          }
+        }
+      }
+
+      .resend-column {
+        align-self: flex-end;
+        flex-grow: 1;
+
+        .em-ds-button {
+          float: right;
+          width: 200px;
+          color: #2080cd;
+        }
+      }
+    }
+
+    .received-docs-container {
+      display: flex;
+      justify-content: flex-end;
+      padding: 25px;
+      border: 1px dashed #A9B1BE;
+      border-left: none;
+      border-right: none;
+
+      .em-ds-button {
+        float: right;
+        width: 200px;
+        color: #2080cd;
+      }
+    }
 }

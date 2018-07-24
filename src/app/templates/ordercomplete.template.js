@@ -49,29 +49,11 @@ const html = (literal, ...cooked) => {
             </div>
             <div class="order-column">
               <label>Email Address </label>
-              <div class="dropdown-container"> 
-                <select class="em-dropdown">
-                    <option class="dropdown-option" value="30">Home: syd.crosby@abc.com</option>
-                    <option class="dropdown-option" value="90">Work: syd.crosby@abc.com</option>
-                </select>
-                <span class="em-icon-chevron-down">
-                  <svg version="1.1" 
-                      xmlns="http://www.w3.org/2000/svg" 
-                      viewBox="0 0 129 129" 
-                      xmlns:xlink="http://www.w3.org/1999/xlink" 
-                      enable-background="new 0 0 129 129">
-                    <g>
-                      <path fill="#2080c3" 
-                      d="m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 
-                      0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z"/>
-                    </g>
-                  </svg>
-                </span>
-              </div>
+              <div>Home: syd.crosby@abc.com</div>
             </div>
             <div class="order-column">
                 <label>Status</label>
-                <div>Pending</div>
+                <div>Completed</div>
             </div>
             <div class="order-column">
                 <label>Date</label>
@@ -80,6 +62,9 @@ const html = (literal, ...cooked) => {
             <div class="order-column resend-column">
                 <button type="button" class="em-ds-button em-ds-button-default em-ds-button-lg">Resend</button>
             </div>
+        </div>
+        <div class="received-docs-container">
+            <button type="button" class="em-ds-button em-ds-button-default em-ds-button-lg">View Received Docs</button>
         </div>
       </div>
     `;
@@ -97,7 +82,7 @@ const html = (literal, ...cooked) => {
         </div>
         <div class="header-info-status">
             <label class="status-label">Status:</label>
-            <label class="status-content">Pending</label>
+            <label class="status-content">Completed</label>
         </div>
     </div>
     <div class="em-header-nav em-logo-header">

@@ -78,3 +78,14 @@ em-dropdown + .em-icon-chevron-down:hover,
 .state-types {
   display: block;
 }
+
+.em-icon-chevron-down {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-bottom: -2px;
+  margin-left: 3px;
+  &:hover {
+    color:#1394E5;
+  }
+}
