@@ -6,5 +6,6 @@ export default class HomeView {
   };
   render(data) {
     this.el.innerHTML = HomeTemplate(data);
+    return this.el;
   };
 }

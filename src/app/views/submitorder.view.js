@@ -6,5 +6,6 @@ export default class SubmitOrderView {
   };
   render(data) {
     this.el.innerHTML = SubmitOrderTemplate(data);
+    return this.el
   };
 }

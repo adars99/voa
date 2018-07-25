@@ -71,7 +71,7 @@ const html = (literal, ...cooked) => {
   };
   
   const footer = data => html ` <div class="em-footer-container em-footer-right">
-    <button type="button" class="em-ds-button em-ds-button-primary" onclick="${data.event.submitOrder}">Done</button>
+    <button type="button" class="em-ds-button em-ds-button-primary em-btn-cancel">Done</button>
   </div>`
   const header = data =>
   

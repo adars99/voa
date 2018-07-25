@@ -1,10 +1,16 @@
+import Router from '../router';
+
 export default class SubmitOrderCtrl {
     constructor(SubmitOrderModel, SubmitOrderView) {
       this.model = SubmitOrderModel;
       this.view = SubmitOrderView;
     };
     render(){
-      this.view.render(this.model.toJSON());
+      const el = this.view.render(this.model.toJSON());
+      el.querySelector('.em-btn-cancel').addEventListener("click", () => {
+        console.log(Router.lastRouteResolved());
+        Router.navigate('*');
+      });
     };
     setView(hash) {
       
@@ -14,6 +20,6 @@ export default class SubmitOrderCtrl {
     };
 
     submitOrder(){
-      console.log("adarsh");
+      console.log('adarsh');
     }
   }

@@ -1,5 +1,4 @@
 import '@elliemae/em-epc-components/dist/bundle';
-import Router from 'es6-router';
 import { $on } from './utils/util';
 import SubmitOrderView from './views/submitorder.view';
 import SubmitOrderModel from './models/submitorder.model';
@@ -16,6 +15,8 @@ import OrderCompleteCtrl from './controllers/ordercomplete.controller';
 import HomeView from './views/home.view';
 import HomeModel from './models/home.model';
 import HomeCtrl from './controllers/home.controller';
+
+import Router from './router';
 
 import '../styles/style.scss';
 class App {
@@ -40,20 +41,19 @@ class App {
 
 const app = new App();
 
-const setView = () => {
-  console.log("document.location.hash", document.location.hash);
-  if(document.location.hash === '#submitorder'){
-  app.submitOrderCtrl.setView(document.location.hash);
-  }else if(document.location.hash === '#orderresend'){
-    app.orderResendCtrl.setView(document.location.hash);
-  }else if(document.location.hash === '#ordercomplete'){
-    app.orderCompleteCtrl.setView(document.location.hash);
-  }else {
-    app.homeCtrl.setView(document.location.hash);
-  }
-}
-
- 
-
-$on(window, 'load', setView);
-$on(window, 'hashchange', setView);
+Router
+  .on({
+    'submitorder': function () {
+      app.submitOrderCtrl.setView(document.location.hash);
+    },
+    'orderresend': function () {
+      app.orderResendCtrl.setView(document.location.hash);
+    },
+    'ordercomplete': function () {
+      app.orderCompleteCtrl.setView(document.location.hash);
+    },
+    '*': function () {
+      app.homeCtrl.setView(document.location.hash);
+    }
+  })
+  .resolve();

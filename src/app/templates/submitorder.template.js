@@ -42,8 +42,8 @@ const controls = data => {
 };
 
 const footer = data => html ` <div class="em-footer-container em-footer-right">
-  <button type="button" class="em-ds-button em-ds-button-default">Cancel</button>
-  <button type="button" class="em-ds-button em-ds-button-primary" onclick="${data.event.submitOrder}">Submit</button>
+  <button type="button" class="em-ds-button em-ds-button-default em-btn-cancel">Cancel</button>
+  <button type="button" class="em-ds-button em-ds-button-primary" onclick="${data.event}">Submit</button>
 </div>`
 const header = data =>
 
